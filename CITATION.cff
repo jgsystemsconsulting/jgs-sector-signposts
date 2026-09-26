@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Rail, Space, and Maritime Knowledge Packs"
+version: 0.1.0
+date-released: 2026-09-24
+url: "https://github.com/jgsystemsconsulting/jgs-sector-signposts"
+repository-code: "https://github.com/jgsystemsconsulting/jgs-sector-signposts"
+license: MIT
+type: software
+keywords:
+  - sector-signposts
+authors:
+  - name: "JG Systems Consulting Ltd"
+    website: "https://www.jgsystemsconsulting.com"

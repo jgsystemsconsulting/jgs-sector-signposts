@@ -1,0 +1,12 @@
+{
+  "name": "Rail, Space, and Maritime",
+  "description": "JG Systems Consulting catalogue of licence-vetted Rail, Space, and Maritime knowledge-pack skills for coding agents.",
+  "owner": { "name": "JG Systems Consulting Ltd.", "url": "https://github.com/jgsystemsconsulting/jgs-sector-signposts" },
+  "plugins": [
+    {
+      "name": "sector-signposts",
+      "source": "./",
+      "description": "Installable Rail, Space, and Maritime knowledge packs reconstructed from open sources."
+    }
+  ]
+}
