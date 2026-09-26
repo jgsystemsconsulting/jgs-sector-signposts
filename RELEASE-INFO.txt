@@ -4,4 +4,4 @@ Version:    0.1.0
 Tag:        v0.1.0
 Staged:     2026-09-24T00:00:00Z
 Vendor:     JG Systems Consulting Ltd.
-Licence:    MIT (tooling); pack content under each source's own licence (see NOTICE)
+Licence:    MIT (tooling and signposts); citation-only signpost pointers, no third-party content (see NOTICE)

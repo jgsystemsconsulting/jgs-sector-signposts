@@ -9,11 +9,15 @@ This product contains two separately licensed layers:
 1. TOOLING & SCAFFOLDING (MIT License, JG Systems Consulting Ltd.)
    Everything outside packs/<slug>/: tooling/, docs/, installers, CI, repo structure.
 
-2. PACK CONTENT (each content pack under its upstream open source's own licence)
-   The reconstructed reference notes inside each content pack's packs/<slug>/ directory
-   are derived from openly-licensed or public-domain sources and carry that source's
-   licence. Attribution is provided textually below and in each packs/<slug>/LICENSE; no
-   source-material download links are published (see docs/LICENSING.md).
+2. PACK CONTENT (no content pack ships; the signpost packs are MIT)
+   This release ships no content pack. The packs/<slug>/ directories hold three
+   signpost packs (rail-signpost, space-signpost, maritime-signpost): citation-only
+   rows naming document designations, titles, editions, owners, redistribution
+   status, and the owners' URLs. Signposts are MIT, JG Systems Consulting Ltd.,
+   and reproduce no standards-body text. A future content pack would carry its
+   upstream source's own licence, attributed textually below and in its
+   packs/<slug>/LICENSE; no source-material download links are published
+   (see docs/LICENSING.md).
 
 -----------------------------------------------------------------------------------
 Third-party source attributions (one block per shipped content pack)

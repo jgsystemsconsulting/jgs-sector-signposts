@@ -15,7 +15,7 @@ SPDX-License-Identifier: MIT
   software and safety work, installable as Agent Skills for coding agents.</strong>
 </p>
 
-**Copyright (c) 2026 JG Systems Consulting Ltd. - MIT License (tooling); pack content under each source's own licence (see [NOTICE](NOTICE)).**
+**Copyright (c) 2026 JG Systems Consulting Ltd. - MIT License (tooling and signposts); citation-only signpost pointers, no third-party content ships (see [NOTICE](NOTICE)).**
 
 ---
 

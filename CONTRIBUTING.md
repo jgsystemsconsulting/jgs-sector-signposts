@@ -8,10 +8,11 @@ SPDX-License-Identifier: MIT
 Thanks for helping grow the catalogue. The bar for a pack is **quality + provenance**:
 faithful to its source, and legally redistributable.
 
-The catalogue ships three member kinds: **content packs** (reconstructed reference notes
-from one vetted source), **signposts** (citation-only maps of sources that cannot be
-packaged), and the **`signposts` orchestrator** (routes `/signposts <question>` to
-packs; no source content). This guide is about adding a content pack; see
+The catalogue defines three member kinds: **content packs** (reference notes from one
+vetted source), **signposts** (citation-only maps of sources that cannot be packaged),
+and the **`signposts` orchestrator** (routes `/signposts <question>` to packs; no source
+content). This repo currently ships signposts and the orchestrator only; no content pack
+ships yet. This guide is about adding a content pack; see
 docs/PACK-SPEC.md for the member kinds.
 
 ## Before you build: vet the source

@@ -18,7 +18,7 @@ A knowledge pack has two separable layers, licensed independently:
 | Layer | What it is | Licence |
 |-------|-----------|---------|
 | **Tooling & scaffolding** | The repo: `tooling/`, installers, docs, CI, pack structure | **MIT** (JG Systems Consulting Ltd.) |
-| **Pack content** | The reconstructed reference notes inside `packs/<slug>/` | **The upstream source's own licence** (see each `packs/<slug>/LICENSE` and the root `NOTICE`) |
+| **Pack content** | Reference notes inside `packs/<slug>/`; none ship in this release (the shipped signposts are MIT citation-only pointers) | **A future content pack keeps the upstream source's own licence** (see each `packs/<slug>/LICENSE` and the root `NOTICE`) |
 
 The machinery is permissively licensed; the *knowledge* keeps whatever obligations its
 open source attached. A CC BY-NC-SA source yields a CC BY-NC-SA pack:
@@ -78,8 +78,8 @@ not affect licence compliance:
 - **Attribution is identification, not a download link.** The CC attribution requirement
   is satisfied by naming the creator, the copyright/licence notice, and indicating that
   changes were made. We do all of this in each pack's `LICENSE`, in the root `NOTICE`, and
-  in `PACK.yaml` (title, publisher, version, licence, and a "reconstructed as reference
-  notes" change indication). The CC term to provide a URI to the material applies only
+  in `PACK.yaml` (title, publisher, version, licence, and a change indication noting the
+  derivative work). The CC term to provide a URI to the material applies only
   *"to the extent reasonably practicable"* and is met by **fully and unambiguously
   identifying a well-known public work** (exact title, version, publisher); a reader can
   locate it trivially. A clickable download link is not required by the licence.

@@ -14,7 +14,7 @@ product_class: agent-skills
 status: live
 version: "0.1.0"
 repository: https://github.com/jgsystemsconsulting/jgs-sector-signposts
-license: MIT (tooling); pack content under each source's own licence
+license: MIT (tooling and signposts); citation-only signpost pointers, no third-party content
 vendor: JG Systems Consulting Ltd.
 
 positioning: >
