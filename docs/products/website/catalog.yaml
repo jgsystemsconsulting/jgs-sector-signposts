@@ -13,6 +13,6 @@ products:
     version: "0.1.0"
     entry: 01-sector-catalogue.yaml
     tagline: >
-      Licence-vetted Rail, Space, and Maritime knowledge-pack skills for coding agents,
-      reconstructed from genuinely open sources.
+      Rail, Space, and Maritime standards signposts (pointers only) for coding
+      agents: designation, edition, owner, and where to get the authentic text.
     repository: https://github.com/jgsystemsconsulting/jgs-sector-signposts

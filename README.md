@@ -8,13 +8,11 @@ SPDX-License-Identifier: MIT
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT%20(tooling)-blue" alt="License: MIT (tooling)">
   <img src="https://img.shields.io/badge/version-0.1.0-green" alt="Version 0.1.0">
-  <img src="https://img.shields.io/badge/type-template-orange" alt="Template repository">
 </p>
 
 <p align="center">
-  <strong>Starting point for a sector knowledge-pack catalogue. This repository is a
-  TEMPLATE: it is not installed as packs. Mint your own sector repo from it.
-  (Minted repos: replace this section with your catalogue introduction.)</strong>
+  <strong>Standards signposts (pointers only) for rail, space, and maritime
+  software and safety work, installable as Agent Skills for coding agents.</strong>
 </p>
 
 **Copyright (c) 2026 JG Systems Consulting Ltd. - MIT License (tooling); pack content under each source's own licence (see [NOTICE](NOTICE)).**
@@ -23,71 +21,39 @@ SPDX-License-Identifier: MIT
 
 ## What it is
 
-This repo is the source template for the industry knowledge-pack fleet: one repo per
-engineering sector, each an installable catalogue of knowledge-pack skills for coding
-agents, with a single orchestrator that routes free-text sector questions to the right
-packs. The template carries the legal root, the pack specification, the validators and
-CI gates, and the installer, so a minted repo starts compliant and gated.
+This repo is the rail, space, and maritime member of the industry knowledge-pack
+fleet. It ships three signposts and no content pack: the governing standards are
+paywalled (CENELEC EN 5012x, IMO instruments) or copyright-restricted (ECSS), and
+the free US space path already lives in jgs-se-knowledge-packs.
 
-Minting copies the tree, substitutes four identity tokens (`sector-signposts`,
-`Rail, Space, and Maritime`, `signposts`, `jgs-sector-signposts`) in file contents and path names,
-and refuses to finish if any token survives in the output. Fleet-wide naming, layout,
-and release rules: [docs/FLEET-CONVENTIONS.md](docs/FLEET-CONVENTIONS.md).
+- **`rail-signpost`**: CENELEC RAMS, signalling, and rolling-stock software
+  standards plus ERA interoperability guides.
+- **`space-signpost`**: ECSS software engineering and product assurance plus NASA
+  software assurance and engineering.
+- **`maritime-signpost`**: IMO instruments plus DNV, ABS, and Lloyd's Register
+  class rules.
 
-## How to mint
+Each signpost row gives the designation, title, edition, owner, status, and the
+owner's URL; no standard text is reproduced. This is engineering signposting,
+not legal or compliance advice.
 
-```bash
-python tooling/instantiate.py --sector <slug> --name "<name>" --orch <slug> --target <path>
-```
-
-- `--sector`: short sector slug (lowercase, hyphenated, e.g. `med-device`). Sets
-  `sector-signposts` and the repo name `jgs-<sector>-knowledge-packs`.
-- `--name`: sector display name (e.g. `"Medical Device"`). Sets `Rail, Space, and Maritime`.
-- `--orch`: orchestrator command slug (e.g. `med`). Sets `signposts`; users type
-  `/<orch> <question>` after install.
-- `--target`: destination directory. It must not already exist or must be empty.
-
-Options:
-
-- `--add-host HOST` (repeatable): adds a link-policy host to
-  `tooling/link-policy-hosts.txt` and the trusted inline set in
-  `.github/workflows/validate.yml` in one step. Use it when your sector's vetted
-  sources live on a host the template does not already list.
-- `--dry-run`: prints the full plan (files, token hits, host additions) and writes
-  nothing.
-
-After a successful mint:
+## Install
 
 ```bash
-cd <path>
-git init -b main && git add -A && git commit -m "chore: mint from sector-repo template"
-python install.py --dry-run
+python install.py --dry-run   # preview
+python install.py             # install the packs as agent skills
 ```
 
-## What the template carries
+Shell equivalents: `install.sh` (bash) and `install.ps1` (PowerShell). After
+install, each pack is invocable as an Agent Skill.
 
-- **Legal root:** [LICENSE](LICENSE) (MIT, tooling and scaffolding only),
-  [NOTICE](NOTICE), [COPYRIGHT](COPYRIGHT), [SECURITY.md](SECURITY.md),
-  [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [CONTRIBUTING.md](CONTRIBUTING.md),
-  [CITATION.cff](CITATION.cff).
-- **Spec docs:** [docs/PACK-SPEC.md](docs/PACK-SPEC.md) (the pack contract),
-  [docs/SOURCE-VETTING.md](docs/SOURCE-VETTING.md) (source eligibility and tiers),
-  [docs/LICENSING.md](docs/LICENSING.md) (two-layer licence model and the link
-  policy), [docs/skill-usage.md](docs/skill-usage.md), and
-  [docs/FLEET-CONVENTIONS.md](docs/FLEET-CONVENTIONS.md) (fleet rules every minted
-  repo ships).
-- **Validators:** `tooling/validate_pack.py` (pack structure), `tooling/build_pack.py`,
-  `tooling/check_release.py` (release gate), plus capability-map, classification, and
-  overlap checks.
-- **CI:** [.github/workflows/validate.yml](.github/workflows/validate.yml), kept in
-  parity with the local gate by `tooling/test_ci_gate.py`.
-- **Installer:** `install.py` / `install.sh` / `install.ps1` with a host-parity guard
-  (`tooling/test_install_guard.py`).
-- **Orchestrator stub:** `packs/signposts/`, an explicit `/<orch> <question>`
-  router that carries no source content; point its routing map at your packs.
-- **Empty catalogue stubs:** [SKILLS.md](SKILLS.md), [catalog.json](catalog.json),
-  `docs/packs.html`, [CHANGELOG.md](CHANGELOG.md), [RELEASE-INFO.txt](RELEASE-INFO.txt)
-  at version 0.1.0.
+## Use
+
+- **`/signposts <question>`**: the orchestrator. Type a free-text rail, space, or
+  maritime standards question and it routes to the right signpost and answers with
+  designation, edition, owner, status, and URL.
+- Each signpost is also invocable directly as **`/rail-signpost`**,
+  **`/space-signpost`**, or **`/maritime-signpost`**.
 
 ## Gates
 
@@ -99,26 +65,13 @@ python tooling/check_release.py         # release readiness: files, versions, le
 python tooling/test_ci_gate.py          # proves CI (.github/workflows/validate.yml) checks the same things
 ```
 
-CI green is not release-ready: `check_release.py` is the pre-tag gate. It prints a
-`RELEASE CHECK: PASS (v<version> @ <sha>)` receipt; run it before tagging and confirm
-the sha matches the commit you tag. A minted repo is release-ready only when all three
-gates exit 0 (see the mint bar in [docs/FLEET-CONVENTIONS.md](docs/FLEET-CONVENTIONS.md)).
-
-## Smoke proof
-
-```bash
-python tooling/test_instantiate.py
-```
-
-Mints a throwaway sector into a temp directory and runs all three gates against the
-minted output, then asserts zero token residue. Exits 0 with `SMOKE PROOF PASS`.
+CI green is not release-ready: `check_release.py` is the pre-tag gate. Run it
+before tagging and confirm the sha on its `RELEASE CHECK: PASS` receipt matches
+the commit you tag.
 
 ## Licence
 
-Two separable layers:
-
-- **Tooling and scaffolding:** [MIT](LICENSE) (JG Systems Consulting Ltd.).
-- **Pack content:** each pack carries its source's own licence, declared in
-  `packs/<slug>/LICENSE` and `packs/<slug>/PACK.yaml`, independent of the repo's MIT
-  licence. Attributions live in [NOTICE](NOTICE); the model is set out in
-  [docs/LICENSING.md](docs/LICENSING.md).
+Tooling and signpost content are [MIT](LICENSE) (JG Systems Consulting Ltd.). No
+pack carries third-party content. Standards are named for identification only and
+remain the property of their owners. The model is set out in
+[docs/LICENSING.md](docs/LICENSING.md).

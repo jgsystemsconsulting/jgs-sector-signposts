@@ -19,17 +19,15 @@ This product contains two separately licensed layers:
 Third-party source attributions (one block per shipped content pack)
 -----------------------------------------------------------------------------------
 
-<!-- TEMPLATE PLACEHOLDER: the template ships no pack content. When a pack is ported
-     or created, append one attribution block here in the exemplar format:
+No content pack ships in this release, so no third-party source attribution
+block applies. The three signpost packs (rail-signpost, space-signpost,
+maritime-signpost) are MIT, JG Systems Consulting Ltd., and carry only
+document designations, titles, editions, owners, redistribution status, and
+the owners' URLs. No standards-body text is reproduced.
 
-[pack: <slug>]
-  Source : <full source title, version, and identifier>
-  Author : <publishing organisation>
-  Licence: <licence name and URL, or public-domain basis>
-  Changes: <how the pack relates to the source>
-  Terms  : <binding conditions and caveats, ending with a pointer to
-            packs/<slug>/LICENSE>
--->
+CENELEC, European Union Agency for Railways (ERA), ECSS, ESA, NASA, IMO,
+DNV, ABS, and Lloyd's Register names and document designations are used for
+identification only; they remain the property of their owners.
 
 -----------------------------------------------------------------------------------
 The build pipeline uses the jgs-reference-skill extraction engine (MIT License,

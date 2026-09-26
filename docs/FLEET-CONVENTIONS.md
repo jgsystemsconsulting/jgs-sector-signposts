@@ -15,6 +15,10 @@ Sector catalogue repos use the pattern `jgs-<sector>-knowledge-packs`, where
 repository is `jgs-sector-repo-template`; it is not itself a sector catalogue and is
 not installed as packs.
 
+One exception: `jgs-sector-signposts` carries the rail, space, and maritime
+signposts in a single repo with no content pack, so it drops the
+`-knowledge-packs` suffix. Its sector slug is `sector-signposts`.
+
 ## Packs layout
 
 Content lives under `packs/<slug>/`. Each pack directory holds at least `SKILL.md`

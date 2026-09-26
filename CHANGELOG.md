@@ -15,4 +15,4 @@ All notable changes to this project are documented here. Format follows
 
 ### Added
 
-- Template initialised from jgs-se-knowledge-packs.
+- Initial public release: rail-signpost, space-signpost, and maritime-signpost (8 rows each, pointers only, no standard text) and the /signposts orchestrator. No content pack ships.

@@ -7,9 +7,9 @@
 slug: jgs-sector-signposts
 name: Rail, Space, and Maritime Knowledge Packs
 tagline: >
-  Installable knowledge-pack skills for coding agents, reconstructed from genuinely
-  open Rail, Space, and Maritime bodies of knowledge, vetted, attributed, and shareable by
-  construction.
+  Installable standards signposts (pointers only) for coding agents in rail,
+  space, and maritime work: designation, edition, owner, and where to get the
+  authentic text.
 product_class: agent-skills
 status: live
 version: "0.1.0"
@@ -18,10 +18,10 @@ license: MIT (tooling); pack content under each source's own licence
 vendor: JG Systems Consulting Ltd.
 
 positioning: >
-  A knowledge pack turns a body of knowledge into a skill a coding agent loads on demand.
-  This is a curated catalogue of those packs for Rail, Space, and Maritime, built so only genuinely
-  open sources go in. Eligibility is enforced, not assumed, and every pack is
-  redistributable by construction.
+  A signpost turns a standards landscape into a skill a coding agent loads on demand.
+  This catalogue carries three of them, for rail, space, and maritime, where the
+  governing standards are paywalled or copyright-restricted. Each row names the
+  document and its owner and links the owner's page; no standard text is included.
 
 audience:
   - Practitioners working in Rail, Space, and Maritime
@@ -30,12 +30,12 @@ audience:
 features:
   - title: Licence-vetted by construction
     detail: >
-      Every source clears a written eligibility rubric; each pack carries its source's
-      licence and attribution.
+      Every row is a citation only: designation, title, edition, owner, status, and
+      the owner's URL. Paywalled and restricted texts stay with their owners.
   - title: Progressive disclosure
     detail: >
-      Each pack is an always-loaded SKILL.md index plus on-demand chapters, so a large
-      body of knowledge never fills the context window.
+      Each signpost is one SKILL.md with grouped row tables, so the agent reads only
+      the rows that match the question.
   - title: /signposts orchestrator
     detail: >
       An explicit /signposts <question> entry point for when you do not know which

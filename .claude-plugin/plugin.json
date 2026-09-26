@@ -1,6 +1,6 @@
 {
   "name": "sector-signposts",
-  "description": "Licence-vetted Rail, Space, and Maritime knowledge-pack skills for coding agents, reconstructed from genuinely open sources. Tooling MIT; pack content under each source's own licence.",
+  "description": "Rail, Space, and Maritime standards signposts (pointers only) for coding agents: designation, edition, owner, status, and the owner's URL for each governing document. Tooling and signpost content MIT; no standards text included.",
   "version": "0.1.0",
   "author": {
     "name": "JG Systems Consulting Ltd."
