@@ -1,0 +1,35 @@
+{
+  "name": "jgs-sector-signposts",
+  "displayName": "JGS Rail, Space, and Maritime Signposts",
+  "description": "Rail, space, and maritime standards signposts (pointers only) for coding agents: designation, edition, owner, status, and the owner's URL for each governing document. No standards text is included.",
+  "version": "0.1.0",
+  "author": {
+    "name": "JG Systems Consulting Ltd."
+  },
+  "homepage": "https://github.com/jgsystemsconsulting/jgs-sector-signposts",
+  "repository": "https://github.com/jgsystemsconsulting/jgs-sector-signposts",
+  "license": "MIT",
+  "keywords": [
+    "rail",
+    "space",
+    "maritime",
+    "signposts",
+    "agent-skills",
+    "standards",
+    "cenelec",
+    "ecss",
+    "imo"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "signposts",
+    "reference",
+    "skills"
+  ],
+  "skills": [
+    "./packs/signposts/SKILL.md",
+    "./packs/maritime-signpost/SKILL.md",
+    "./packs/rail-signpost/SKILL.md",
+    "./packs/space-signpost/SKILL.md"
+  ]
+}

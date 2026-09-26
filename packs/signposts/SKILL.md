@@ -22,6 +22,11 @@ to open.
 
 ## How /signposts answers
 
+Every member of this catalogue is a signpost. Answers cite `[slug index]`, give each
+document's designation, edition, owner, and status with the row URL as the signpost
+prints it, and state that the standard text is outside the packs. No member has
+chapters, so `[slug chNN]` citations never apply here.
+
 ### Modes
 
 | Mode | When | Gate |
@@ -71,14 +76,32 @@ Output goes in the reply unless the user names a file. A deliverable with no mat
 ### Topics
 | Topic | Keywords | Packs (best first) |
 |---|---|---|
+| Railway RAMS | RAMS, reliability, availability, maintainability, safety, EN 50126, railway safety case | `rail-signpost` |
+| Railway signalling and control software | EN 50128, EN 50129, signalling, interlocking, SIL, safety related electronic systems, control and protection software | `rail-signpost` |
+| Rolling stock software | EN 50657, onboard software, rolling stock, train software | `rail-signpost` |
+| EU railway interoperability | TSI, CCS TSI, ERTMS, ETCS, interoperability, ERA guide | `rail-signpost` |
+| Space software engineering | ECSS-E-ST-40, ECSS software, space software, flight software, ground software | `space-signpost` |
+| Space software product assurance | ECSS-Q-ST-80, software product assurance, software quality, space PA | `space-signpost` |
+| NASA software assurance and safety | NASA-STD-8739.8, NPR 7150.2, software assurance, software safety, SWEHB, NASA-HDBK-2203, software classification | `space-signpost` |
+| Maritime safety conventions | SOLAS, ISM Code, safety management system, IMO convention, IMO circular | `maritime-signpost` |
+| Ship classification rules | classification society, class rules, DNV, ABS, Lloyd's Register, LR, rule set | `maritime-signpost` |
 
 ### Agency contexts
 | Agency | Keywords | Packs |
 |---|---|---|
+| CENELEC | CENELEC, EN, European standard, national standards body, BSI, DIN | `rail-signpost` |
+| ERA | ERA, European Union Agency for Railways, TSI, EU rail | `rail-signpost` |
+| ECSS / ESA | ECSS, ESA, European space | `space-signpost` |
+| NASA | NASA, OSMA, OCE, NODIS, US space | `space-signpost` |
+| IMO | IMO, International Maritime Organization, SOLAS, MSC | `maritime-signpost` |
+| Classification societies | DNV, ABS, Lloyd's Register, IACS, class | `maritime-signpost` |
 
 ### Deliverables
 | Deliverable | Keywords | Draft | Review | Verify |
 |---|---|---|---|---|
+| Rail applicable-standards register | rail standards list, applicable documents, rail compliance register | `rail-signpost` | | `rail-signpost` |
+| Space applicable-standards register | space standards list, applicable documents, ECSS tailoring list | `space-signpost` | | `space-signpost` |
+| Maritime applicable-standards register | maritime standards list, applicable documents, class and flag references | `maritime-signpost` | | `maritime-signpost` |
 
 ### Licences
 | Pack | Licence |
