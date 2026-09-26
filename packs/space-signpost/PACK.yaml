@@ -1,0 +1,17 @@
+slug: space-signpost
+kind: signpost
+title: "Space Software and Safety Standards: Signpost (pointers only)"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Signpost, not a knowledge pack. Zero standards-body text. Rows carry
+  designation, title, edition, owner, status, and the owner's URL only.
+  ECSS standards are Excluded from packaging under docs/SOURCE-VETTING.md:
+  the owner offers downloads, but (c) ECSS with no reproduction consent,
+  so the rows are citation only. NASA-STD-8739.8B, NPR 7150.2D, and the
+  NASA software engineering handbook are US government works cited by URL
+  here; their packaged content lives fleet-side in jgs-se-knowledge-packs.
+  Free paths point to fleet repos by name. Trademarks named for
+  identification only.

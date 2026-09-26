@@ -1108,11 +1108,11 @@ jobs:
           # the pin values honest inside this self-contained gate.
           # THRESHOLDS: dict[str, int] = {}  # empty-tree: zero-tolerant name-keyed minimums
           # EXPECTED_NOTES_COUNT = 0
-          # expected_signposts: list[str] = []
+          # expected_signposts: list[str] = ["maritime-signpost", "rail-signpost", "space-signpost"]
           THRESHOLDS = {}
           EXPECTED_NOTES_COUNT = 0
-          expected_signposts = []
-          if THRESHOLDS != {} or EXPECTED_NOTES_COUNT != 0 or list(expected_signposts) != []:
+          expected_signposts = ["maritime-signpost", "rail-signpost", "space-signpost"]
+          if THRESHOLDS != {} or EXPECTED_NOTES_COUNT != 0 or list(expected_signposts) != ["maritime-signpost", "rail-signpost", "space-signpost"]:
               print(f"::error::[map-data] empty-tree constant pin drift "
                     f"(THRESHOLDS={THRESHOLDS!r} EXPECTED_NOTES_COUNT={EXPECTED_NOTES_COUNT!r} "
                     f"expected_signposts={expected_signposts!r})")

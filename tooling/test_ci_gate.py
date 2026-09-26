@@ -136,7 +136,11 @@ ROUTING_MAP_PAIR = [
 EMPTY_TREE_PAIR = [
     ("THRESHOLDS empty", "THRESHOLDS: dict[str, int] = {}", MAP_TWIN),
     ("EXPECTED_NOTES_COUNT zero", "EXPECTED_NOTES_COUNT = 0", GEN_TWIN),
-    ("expected_signposts empty", "expected_signposts: list[str] = []", RULES_TWIN),
+    (
+        "expected_signposts sector-signposts-trio",
+        'expected_signposts: list[str] = ["maritime-signpost", "rail-signpost", "space-signpost"]',
+        RULES_TWIN,
+    ),
 ]
 
 # Literals pinned per local twin (map/classification envelope).

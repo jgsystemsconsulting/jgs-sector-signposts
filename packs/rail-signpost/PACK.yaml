@@ -1,0 +1,16 @@
+slug: rail-signpost
+kind: signpost
+title: "Rail Software and Safety Standards: Signpost (pointers only)"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Signpost, not a knowledge pack. Zero standards-body text. Rows carry
+  designation, title, edition, owner, status, and the owner's URL only.
+  CENELEC EN 50126-1, EN 50126-2, EN 50128, EN 50129, and EN 50657 are
+  Excluded under docs/SOURCE-VETTING.md: paywalled through national
+  standards bodies with no redistribution grant. The ERA TSI General Guide,
+  the CCS TSI Application Guide, and the CCS TSI domain page are free from
+  ERA but (c) ERA/EU, citation only, not packaged. Free paths point to
+  fleet repos by name. Trademarks named for identification only.

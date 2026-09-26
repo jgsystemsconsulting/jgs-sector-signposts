@@ -1,0 +1,16 @@
+slug: maritime-signpost
+kind: signpost
+title: "Maritime Software and Safety Standards: Signpost (pointers only)"
+publisher: "JG Systems Consulting Ltd."
+license: "MIT"
+license_tier: 2
+commercial_use: true
+notes: >
+  Signpost, not a knowledge pack. Zero standards-body text. Rows carry
+  designation, title, edition, owner, status, and the owner's URL only.
+  SOLAS 1974 and the ISM Code are Excluded under docs/SOURCE-VETTING.md:
+  IMO sells the consolidated texts with no redistribution grant. The IMO
+  orientation pages and the DNV, ABS, and Lloyd's Register rule portals are
+  free to read under each owner's terms, citation only, not packaged. No
+  fleet content pack covers maritime. Trademarks named for identification
+  only.
