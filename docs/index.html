@@ -76,6 +76,13 @@ nav.site a:hover{color:var(--text-hi);border:0}
 .btn.primary{background:var(--paper);color:var(--paper-ink);border-color:var(--paper)}
 .btn:hover{border-bottom-color:var(--line)}
 .btn.primary:hover{background:#fff}
+button.btn{cursor:pointer;border-radius:0}
+.btn-copy{background:transparent;color:var(--text-hi)}
+.btn-copy:hover{border-color:var(--paper)}
+.install-fallback{flex-basis:100%;min-width:0}
+.install-fallback summary{cursor:pointer;margin-top:2px}
+.install-fallback pre{margin-top:14px;font:400 0.875rem/1.7 var(--mono);color:var(--text);white-space:pre-wrap;overflow:auto;max-height:24rem}
+.copy-status{align-self:center;font:700 0.75rem/1 var(--mono);color:var(--text-hi)}
 
 /* Sections */
 section{padding-top:var(--pad-section);padding-bottom:var(--pad-section);border-bottom:1px solid var(--line)}
@@ -145,8 +152,64 @@ footer .label{display:block;margin-bottom:8px}
   a hazy recollection.</p>
   <div class="cta">
     <a class="btn primary" href="https://github.com/jgsystemsconsulting/jgs-sector-signposts">View the repository <span aria-hidden="true">&rarr;</span></a>
-    <a class="btn" href="packs.html">Browse the catalogue <span aria-hidden="true">&rarr;</span></a>
-  </div>
+        <a class="btn" href="packs.html">Browse the catalogue <span aria-hidden="true">&rarr;</span></a>
+        <button type="button" class="btn btn-copy" id="install-copy">Copy install prompt</button>
+        <span class="copy-status" aria-live="polite"></span>
+        <details class="install-fallback">
+          <summary>Install AI agent</summary>
+          <pre id="install-prompt">You are installing jgs-sector-signposts, an open catalogue (MIT tooling and signposts) of
+standards-signpost skills for rail, space, and maritime software work by JG Systems Consulting Ltd.
+Signposts are pointers only: designation, edition, owner, status, and the owner&#x27;s URL;
+no standard text is reproduced.
+Repository: https://github.com/jgsystemsconsulting/jgs-sector-signposts (version 0.1.0).
+Do this in order:
+1. Read README.md and docs/PACK-SPEC.md so you understand what you are installing.
+2. Run `python install.py --dry-run` and show me the pack list and target
+   (~/.claude/skills/jgs-sector-signposts/). If it looks right, run `python install.py`.
+   Shell equivalents: `install.sh` (bash) and `install.ps1` (PowerShell).
+3. Verify: list the installed signposts under the target and confirm the count matches
+   SKILLS.md (3 signposts + the /signposts orchestrator).
+4. Tell me to restart Claude Code, then ask `/signposts which standard covers railway
+   software safety?`.
+5. No third-party content ships; keep attribution intact (see NOTICE).</pre>
+        </details>
+        <script>
+        (function () {
+          var btn = document.getElementById("install-copy");
+          var pre = document.getElementById("install-prompt");
+          var live = document.querySelector(".copy-status");
+          if (!btn || !pre || !live) return;
+          function report(ok) {
+            live.textContent = ok ? "Copied" : "Copy failed. Select the text below.";
+            if (!ok) {
+              var box = pre.closest("details");
+              if (box) box.open = true;
+            }
+          }
+          function legacy(text) {
+            var ta = document.createElement("textarea");
+            ta.value = text;
+            ta.setAttribute("readonly", "");
+            ta.style.position = "fixed";
+            ta.style.left = "-9999px";
+            document.body.appendChild(ta);
+            ta.select();
+            var ok = false;
+            try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+            document.body.removeChild(ta);
+            return ok;
+          }
+          btn.addEventListener("click", function () {
+            var text = pre.textContent;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(text).then(function () { report(true); }, function () { report(legacy(text)); });
+            } else {
+              report(legacy(text));
+            }
+          });
+        })();
+        </script>
+      </div>
 </div></header>
 
 <!-- §01 What it is -->
